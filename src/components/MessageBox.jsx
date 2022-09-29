@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { appContext } from '../context/appContext';
 import { useContext } from 'react';
 import { useEffect } from 'react';
-import userlogo from "../images/userlogo.png";
+// import userlogo from "../images/userlogo.png";
 
 const MessageBox = () => {
 
@@ -77,7 +77,7 @@ const MessageBox = () => {
               <div className={sender?.email === user?.email ? "messageView" : "incomingMessage"} key={idxMsg}>
                   <div className="message-box">
                     <div className="message-from">
-                      <img className='userImage' src={userlogo} alt={userlogo} />
+                      <img className='userImage' src={sender.image} alt={sender.image} />
                       <p className='userName'>{sender.id === user._id ? "You" : sender.name}</p>
                     </div>
                     <h4 className="messageContent">{content}</h4>
